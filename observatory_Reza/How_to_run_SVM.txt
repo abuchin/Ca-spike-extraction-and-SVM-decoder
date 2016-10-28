@@ -1,0 +1,22 @@
+Algorithm to run SVM on another spike input
+
+   
+1) Pool spiking data:
+
+   firing_rate.py
+   fr = np.zeros... - pools the firing-rates from loaded all_spikes_binary_file.csv
+   
+
+2) Run SVM on spikes (compares shuffled vs. non-shuffled)
+   
+   read_data.py
+   # load firing rates, read dsi
+   fr - is the vector of poold firing-rates from all_spikes_binary_file.csv
+
+
+3) Add return to save the data from 
+
+	decoder.py
+	def svm_decoder
+	...
+	return - something, original_vector,  shuffled_vector
